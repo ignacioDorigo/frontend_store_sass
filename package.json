@@ -1,0 +1,32 @@
+{
+  "name": "frontend_store_sass",
+  "version": "1.0.0",
+  "description": "Proyecto de Remeras con SASS y HTML",
+  "keywords": [
+    "SASS",
+    "GULP",
+    "REMERAS",
+    "HTML"
+  ],
+  "homepage": "https://github.com/ignacioDorigo/frontend_store_sass#readme",
+  "bugs": {
+    "url": "https://github.com/ignacioDorigo/frontend_store_sass/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ignacioDorigo/frontend_store_sass.git"
+  },
+  "license": "ISC",
+  "author": "Ignacio Dorigo",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.87.0",
+    "sharp": "^0.34.1"
+  }
+}

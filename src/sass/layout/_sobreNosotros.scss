@@ -1,0 +1,62 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.sobre_nosotros_h1 {
+  text-align: center;
+  color: v.$color_secundario;
+}
+
+.div_sobre_nosotros {
+  @include m.contenedor;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 5rem;
+  @include m.desktop() {
+    flex-direction: row;
+  }
+
+  .sobre_nosotros__descripcion {
+    color: v.$color_blanco;
+    line-height: 2;
+    font-size: 2rem;
+    text-align: justify;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .sobre_nosotros__img {
+    order: -1;
+    @include m.desktop() {
+      order: 99;
+      height: max-content;
+    }
+  }
+}
+.section_porque_comprar {
+  color: v.$color_secundario;
+  text-align: center;
+  font-size: 2.3rem;
+}
+
+.div_svgs {
+  @include m.contenedor;
+  @include m.tablet() {
+    @include m.grid(2, 2rem);
+  }
+  @include m.desktop() {
+    @include m.grid(4, 2rem);
+  }
+}
+
+.motivo {
+  .motivo__parrafo,
+  .motivo__titulo {
+    margin: 1rem;
+  }
+  .motivo__parrafo {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: v.$color_blanco;
+  }
+}

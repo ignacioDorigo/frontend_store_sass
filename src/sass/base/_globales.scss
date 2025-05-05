@@ -14,4 +14,16 @@ html {
 }
 body {
   background-color: v.$color_primario;
+  font-family: v.$fuente_principal;
+}
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 4rem;
 }

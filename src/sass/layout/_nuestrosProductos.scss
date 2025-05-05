@@ -1,0 +1,86 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.nuestros_productos_h1 {
+  text-align: center;
+  color: v.$color_secundario;
+}
+
+.div_remeras {
+  @include m.contenedor;
+
+  @include m.grid(1, 2rem);
+
+  @include m.tablet() {
+    @include m.grid(2, 2rem);
+  }
+
+  @include m.desktop() {
+    @include m.grid(3, 2rem);
+  }
+}
+
+.remera {
+  background-color: v.$color_primario_oscuro;
+  padding: 1rem;
+  transition: transform 0.3s ease-in-out;
+  img {
+    width: 100%;
+  }
+  .remera__descripcion,
+  .remera__precio {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
+  .remera__descripcion {
+    text-transform: uppercase;
+    font-size: 3.5em;
+    font-weight: bold;
+    color: v.$color_blanco;
+  }
+  .remera__precio {
+    font-size: 2.8rem;
+    color: v.$color_secundario;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.banner__remeras,
+.banner__node {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 30rem;
+}
+
+.banner__node {
+  background-image: url("../src/img/remeras/grafico2.webp");
+  grid-column: 1/2;
+  grid-row: 8/9;
+  @include m.tablet() {
+    grid-column: 1/3;
+    grid-row: 5/6;
+    height: auto;
+  }
+  @include m.desktop() {
+    grid-column: 2/4;
+    grid-row: 5/6;
+    height: auto;
+  }
+}
+
+.banner__remeras {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background-image: url("../src/img/remeras/grafico1.webp");
+  @include m.tablet() {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    height: auto;
+  }
+}

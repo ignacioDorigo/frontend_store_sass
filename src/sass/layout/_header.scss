@@ -1,2 +1,29 @@
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 3rem 0rem;
+}
+
+.navegacion__bg {
+  background-color: v.$color_primario_oscuro;
+  width: 100%;
+
+  .navegacion {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    .navegacion__enlace {
+      font-size: 3rem;
+      color: v.$color_blanco;
+      padding: 2rem 0rem;
+    }
+    .activo {
+      color: v.$color_secundario;
+    }
+  }
+}

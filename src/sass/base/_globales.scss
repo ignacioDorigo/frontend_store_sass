@@ -1,0 +1,14 @@
+// Box Model => Border Box
+html {
+  box-sizing: border-box;
+  //   Tema del Scroll
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  //   hack rem 1rem = 10px
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+

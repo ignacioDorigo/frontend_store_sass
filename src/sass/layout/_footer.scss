@@ -1,2 +1,26 @@
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
+
+.footer_bg {
+  margin-top: 10rem;
+  background-color: v.$color_primario_oscuro;
+}
+
+.footer {
+  @include m.contenedor();
+
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  @include m.tablet() {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  img {
+    width: 10rem;
+    filter: grayscale(100%);
+  }
+}

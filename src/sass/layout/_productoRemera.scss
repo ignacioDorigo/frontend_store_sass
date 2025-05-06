@@ -1,0 +1,64 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.remera_reactjs {
+  text-align: center;
+  color: v.$color_secundario;
+}
+
+.div_producto {
+  @include m.contenedor();
+  @include m.grid(1, 3rem);
+
+  @include m.tablet() {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.producto_info {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  .producto__descripcion {
+    font-size: 1.9rem;
+    line-height: 1.5;
+    margin: 0;
+    color: v.$color_blanco;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+.div_producto_talle_cantidad {
+  display: flex;
+  gap: 2rem;
+}
+.div_producto_talle,
+.div_producto_cantidad {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 2rem;
+  color: v.$color_blanco;
+
+  select,
+  input {
+    text-align: center;
+    padding: 0.5rem;
+    border: 5px solid v.$color_primario_oscuro;
+    color: v.$color_blanco;
+    background-color: v.$color_primario;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+.btn_comprar {
+  background-color: v.$color_secundario;
+  border: none;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+}

@@ -534,3 +534,98 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   color: #ffffff;
 }
+
+.remera_reactjs {
+  text-align: center;
+  color: #ffce00;
+}
+
+.div_producto {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 120rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3rem;
+}
+@media (min-width: 768px) {
+  .div_producto {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+.div_producto img {
+  width: 100%;
+}
+
+.producto_info {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.producto_info .producto__descripcion {
+  font-size: 1.9rem;
+  line-height: 1.5;
+  margin: 0;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.div_producto_talle_cantidad {
+  display: flex;
+  gap: 2rem;
+}
+
+.div_producto_talle,
+.div_producto_cantidad {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 2rem;
+  color: #ffffff;
+}
+.div_producto_talle select,
+.div_producto_talle input,
+.div_producto_cantidad select,
+.div_producto_cantidad input {
+  text-align: center;
+  padding: 0.5rem;
+  border: 5px solid #89119d;
+  color: #ffffff;
+  background-color: #9c27b0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn_comprar {
+  background-color: #ffce00;
+  border: none;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.footer_bg {
+  margin-top: 10rem;
+  background-color: #89119d;
+}
+
+.footer {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 120rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.footer img {
+  width: 10rem;
+  filter: grayscale(100%);
+}
